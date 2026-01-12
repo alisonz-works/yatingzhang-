@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alison — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <div class="navbar">
+      <a class="brand" href="index.html">
+        <span class="dot"></span>
+        <span>Alison / Portfolio</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">
+        Menu
+      </button>
+    </div>
+
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero" id="about">
+    <div class="kicker">Portfolio</div>
+    <h1>Alison</h1>
+    <p class="subtitle">
+      I use interactive systems and film to explore how people find meaning and home in worlds they cannot change.
+    </p>
+  </section>
+
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+
+    <div class="cards">
+      <a class="card" href="game.html">
+        <div class="card-title">Death That Blooms Into a Flower</div>
+        <div class="card-desc">Interactive game + Emotional Dialogue System</div>
+      </a>
+
+      <a class="card" href="film.html">
+        <div class="card-title">The Ground We Learn to Call Home</div>
+        <div class="card-desc">Documentary + place-based thinking</div>
+      </a>
+
+      <a class="card" href="ceramics.html">
+        <div class="card-title">Ceramics (Early Work)</div>
+        <div class="card-desc">Physical making + form, memory, and systems</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email: alisonz0816@gmail.com
+      <!-- TODO: change this -->
+      <a href="mailto:your-email@example.com">your-email@example.com</a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© <span id="year"></span> Alison.</div>
+</footer>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const panel = document.getElementById('mobilePanel');
+
+  btn?.addEventListener('click', () => {
+    const open = panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+
+  // Close mobile menu after clicking a link
+  panel?.querySelectorAll('a')?.forEach(a => {
+    a.addEventListener('click', () => {
+      panel.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.getElementById('year').textContent = String(new Date().getFullYear());
+</script>
+</body>
+</html>
