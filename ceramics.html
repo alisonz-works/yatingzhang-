@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ceramics — Alison</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <div class="navbar">
+      <a class="brand" href="index.html">
+        <span class="dot"></span>
+        <span>Alison / Portfolio</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="kicker">Ceramics</div>
+    <h1>Ceramics (Early Work)</h1>
+    <p class="subtitle">
+      Physical making as a way to study form, memory, and constraints. (This page is a placeholder — I’ll add process photos and notes.)
+    </p>
+  </section>
+
+  <div class="panel">
+    <h2>What I’m showing here</h2>
+    <ul>
+      <li>Process photos (clay → firing → glaze)</li>
+      <li>Design intent (form decisions + iteration)</li>
+      <li>Short reflection: what I learned</li>
+    </ul>
+    <p style="color:var(--muted);">
+      Optional: add image files later under <code>assets/img/</code> and link them here.
+    </p>
+  </div>
+
+  <div style="height:20px"></div>
+  <a href="index.html" style="color:var(--muted);">← Back to Projects</a>
+</main>
+
+<footer>
+  <div class="container">© <span id="year"></span> Alison.</div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = String(new Date().getFullYear());
+</script>
+</body>
+</html>
